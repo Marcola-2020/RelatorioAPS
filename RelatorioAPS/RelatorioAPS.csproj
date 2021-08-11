@@ -65,13 +65,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="conexao.cs" />
-    <Compile Include="ConexaoRelatorio\DsRelqtdAtendimento.cs">
-      <DependentUpon>DsRelqtdAtendimento.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="ConexaoRelatorio\DsRelqtdAtendimento.Designer.cs">
+    <Compile Include="Relatorios\DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DsRelqtdAtendimento.xsd</DependentUpon>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="RelPrincipal.cs">
       <SubType>Form</SubType>
@@ -81,6 +78,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Telas Relatorios\relConsultas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas Relatorios\relConsultas.Designer.cs">
+      <DependentUpon>relConsultas.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Relatorios\rpConsulta_ds1.rdlc" />
     <EmbeddedResource Include="RelPrincipal.resx">
       <DependentUpon>RelPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -92,26 +96,20 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Relatorios\RelQtdAtendimentos.rdlc" />
-    <None Include="ConexaoRelatorio\DsRelqtdAtendimento.xsc">
-      <DependentUpon>DsRelqtdAtendimento.xsd</DependentUpon>
-    </None>
-    <None Include="ConexaoRelatorio\DsRelqtdAtendimento.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DsRelqtdAtendimento.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="ConexaoRelatorio\DsRelqtdAtendimento.xss">
-      <DependentUpon>DsRelqtdAtendimento.xsd</DependentUpon>
-    </None>
+    <EmbeddedResource Include="Telas Relatorios\relConsultas.resx">
+      <DependentUpon>relConsultas.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Dados.Banco.datasource" />
     <None Include="Properties\DataSources\Dados.datasource" />
     <None Include="Properties\DataSources\DataSet1.datasource" />
     <None Include="Properties\DataSources\DataSet1.DataTable1DataTable.datasource" />
+    <None Include="Properties\DataSources\DsRelqtdAtendimento.datasource" />
     <None Include="Properties\DataSources\Program.datasource" />
     <None Include="Properties\DataSources\RelatorioAPS.ConexaoRelatorio.DataSet1.datasource" />
+    <None Include="Properties\DataSources\RelatorioAPS.ConexaoRelatorio.DataSet2.datasource" />
     <None Include="Properties\DataSources\RelatorioAPS.Properties.Resources.datasource" />
     <None Include="Properties\DataSources\RelatorioAPS.Properties.Settings.datasource" />
     <None Include="Properties\DataSources\RelPrincipal.datasource" />
@@ -127,6 +125,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Relatorios\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Relatorios\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Relatorios\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\logo conexao.jpg" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
